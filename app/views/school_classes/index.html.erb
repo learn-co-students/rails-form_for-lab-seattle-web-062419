@@ -1,0 +1,18 @@
+
+<h1>School classes</h1>
+ 
+<table>
+  <tr>
+    <th>Title:</th>
+    <th>Room Number:</th>
+    <th></th>
+  </tr>
+ 
+  <% @school_classes.each do |school_class| %>
+    <tr>
+      <td><%= school_class.title %></td>
+      <td><%= school_class.room_number %></td>
+      <td><%= link_to 'Students', school_class_path(school_class) %></td>
+    </tr>
+  <% end %>
+</table>
